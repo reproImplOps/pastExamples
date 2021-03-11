@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-TBTFZ7Q");
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/arta.min.css"
+      integrity="sha512-705aS8CRXhSYjPeqfud3WN31S3fZ7LmgbPH0o5UnqIteOJFY5ddIG+vf8uUl78MpzVrOmSIUkigud65N6OZtgQ=="
+      crossorigin="anonymous"
+    />
+    <title>過去事例</title>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-TBTFZ7Q"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <h1>TRIAL PAGE</h1>
+    <h1>過去事例集</h1>
+    <script>
+      !(function (o, e, n) {
+        var r = [];
+        if (window.reproio)
+          console.info("Repro Web SDK was loaded more than once");
+        else {
+          window.reproio = function () {
+            r.push(arguments);
+          };
+          var i = o.createElement(e),
+            t = o.getElementsByTagName(e)[0];
+          (i.src = "https://cdn.reproio.com/web/v2/repro-sdk.min.js"),
+            (i.async = !0),
+            (i.crossOrigin = ""),
+            (i.onload = function () {
+              window.reproio("setSnippetVersion", "2.1"),
+                r.forEach(function (o) {
+                  window.reproio.apply(window.reproio, o);
+                });
+            }),
+            t.parentNode.insertBefore(i, t);
+        }
+      })(document, "script");
+      reproio("setup", "3a35a34b-ea54-43ff-9d52-5a7b6e70982c");
+      reproio("track", "PageView");
+    </script>
+    <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.13.5/js/lib/beautify.js"></script>
+    <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.13.5/js/lib/beautify-css.js"></script>
+    <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.13.5/js/lib/beautify-html.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
   </body>
 </html>
